@@ -14,8 +14,24 @@ export const RecuperarFormContainer = styled.div`
   background-color: #4b5563;
   padding: 3rem;
   border-radius: 8px;
-  width: 40%;
+  width: 60%;
   text-align: center;
+
+  @media (min-width: 768px) {
+    background-color: #4b5563;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 60%;
+    text-align: center;
+  }
+
+  @media (min-width: 640px) {
+    background-color: #4b5563;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 40%;
+    text-align: center;
+  }
 `
 
 export const RecuperarTitle = styled.h1`

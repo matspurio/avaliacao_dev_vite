@@ -25,7 +25,15 @@ export const ModalContainer = styled.div`
   background-color: #f0f0f0;
   border-radius: 0.25rem;
   padding: 1rem;
-  width: 20%;
+  width: 30%;
+
+  @media (min-width: 768px) {
+    width: 50%;
+  }
+
+  @media (min-width: 640px) {
+    width: 30%;
+  }
 `
 
 export const ModalCloseButton = styled.button`
@@ -35,7 +43,7 @@ export const ModalCloseButton = styled.button`
 `
 
 export const ModalSelect = styled.select`
-  width: 60%;
+  width: 40%;
   border-radius: 0.25rem;
   padding: 0.25rem;
   margin-bottom: 1rem;

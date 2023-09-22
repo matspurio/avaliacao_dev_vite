@@ -1,5 +1,8 @@
 import { Check, PencilLine, X } from '@phosphor-icons/react'
 import { Button, GridContainer, GridItem } from './style'
+import { useState } from 'react'
+import ModalStatusAtivo from '../ModalStatusAtivo'
+import ModalStatusInativo from '../ModalStatusInativo'
 
 const atletas = [
   {
@@ -23,6 +26,9 @@ const atletas = [
 ]
 
 export default function AtletaCard() {
+  const [showModal, setShowModal] = useState<boolean>(false)
+  const [showModalInativo, setShowModalInativo] = useState<boolean>(false)
+
   return (
     <GridContainer>
       {atletas.map((atleta) => (
@@ -39,17 +45,32 @@ export default function AtletaCard() {
               <PencilLine size={24} />
             </Button>
             {atleta.status === 'Inativo' ? (
-              <Button style={{ color: 'green' }} title="Ativar">
+              <Button
+                onClick={() => setShowModal(true)}
+                style={{ color: 'green' }}
+                title="Ativar"
+              >
                 <Check size={24} />
               </Button>
             ) : (
-              <Button title="Inativar">
+              <Button
+                onClick={() => setShowModalInativo(true)}
+                title="Inativar"
+              >
                 <X style={{ color: 'red' }} size={24} />
               </Button>
             )}
           </GridItem>
         </>
       ))}
+      <ModalStatusAtivo
+        isVisible={showModal}
+        onClose={() => setShowModal(false)}
+      />
+      <ModalStatusInativo
+        isVisible={showModalInativo}
+        onClose={() => setShowModalInativo(false)}
+      />
     </GridContainer>
   )
 }

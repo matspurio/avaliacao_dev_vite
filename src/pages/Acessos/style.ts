@@ -5,21 +5,44 @@ export const Main = styled.main`
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  padding: 6rem;
+  padding: 7rem 0.2rem;
   background-color: #e5e7eb;
   width: 100%;
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 6rem;
+    background-color: #e5e7eb;
+    width: 100%;
+  }
+
+  @media (min-width: 640px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 7rem 6rem;
+    background-color: #e5e7eb;
+    width: 100%;
+  }
 `
 
 export const Container = styled.div`
-  border: 2px solid #d1d5db;
-  padding: 3rem;
-  border-radius: 0.375rem;
+  padding: 0.2rem;
   width: 100%;
+
+  @media (min-width: 768px) {
+    border: 2px solid #d1d5db;
+    padding: 3rem;
+    border-radius: 0.375rem;
+    width: 100%;
+  }
 `
 
-export const Header = styled.div`
-  /* Seu estilo para o cabeçalho aqui, se aplicável */
-`
+export const Header = styled.div``
 
 export const BackButton = styled.a`
   display: flex;

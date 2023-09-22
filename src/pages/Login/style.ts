@@ -12,9 +12,23 @@ export const Container = styled.div`
 
 export const Card = styled.div`
   background-color: #4b5563;
-  padding: 2rem;
-  width: 30%;
+  padding: 1rem 2rem;
+  width: 70%;
   border-radius: 0.5rem;
+
+  @media (min-width: 768px) {
+    background-color: #4b5563;
+    padding: 1rem 2rem;
+    width: 50%;
+    border-radius: 0.5rem;
+  }
+
+  @media (min-width: 640px) {
+    background-color: #4b5563;
+    padding: 1rem 2rem;
+    width: 40%;
+    border-radius: 0.5rem;
+  }
 `
 
 export const Title = styled.p`
